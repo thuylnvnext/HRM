@@ -1,0 +1,608 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FB2296DF-7194-4EF9-ADE2-A4F320DA1C7A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Attendance</RootNamespace>
+    <AssemblyName>Attendance</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Charts.v9.3.Core, Version=9.3.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Data.v9.3, Version=9.3.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v9.3, Version=9.3.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v9.3, Version=9.3.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v9.3, Version=9.3.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v9.3.UI, Version=9.3.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v9.3, Version=9.3.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v9.3, Version=9.3.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v9.3, Version=9.3.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraNavBar.v9.3, Version=9.3.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraPivotGrid.v9.3, Version=9.3.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraPivotGrid.v9.3.Core, Version=9.3.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v9.3, Version=9.3.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v9.3, Version=9.3.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraRichEdit.v9.3, Version=9.3.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v9.3, Version=9.3.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v9.3.Core, Version=9.3.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v9.3.Extensions, Version=9.3.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraSpellChecker.v9.3, Version=9.3.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraSpellChecker.v9.3.Core, Version=9.3.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v9.3, Version=9.3.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraVerticalGrid.v9.3, Version=9.3.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" />
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web.Services, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Windows\assembly\GAC_MSIL\System.Web.Services\2.0.0.0__b03f5f7f11d50a3a\System.Web.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\MonthWorking.cs" />
+    <Compile Include="Classes\DayOffControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Classes\Formatter.cs" />
+    <Compile Include="Classes\LookUp.cs" />
+    <Compile Include="Classes\MonthAttendance.cs" />
+    <Compile Include="Classes\TimeInTimeOut.cs" />
+    <Compile Include="Classes\Reader.cs" />
+    <Compile Include="Forms\ChangeShift.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ChangeShift.Designer.cs">
+      <DependentUpon>ChangeShift.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MonthOT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MonthOT.designer.cs">
+      <DependentUpon>MonthOT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RegisterDayOffGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RegisterDayOffGroup.designer.cs">
+      <DependentUpon>RegisterDayOffGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TimeInTimeOutFix.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TimeInTimeOutFix.designer.cs">
+      <DependentUpon>TimeInTimeOutFix.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MonthWorking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MonthWorking.Designer.cs">
+      <DependentUpon>MonthWorking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DayOff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DayOff.Designer.cs">
+      <DependentUpon>DayOff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DefineAbsence.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DefineAbsence.Designer.cs">
+      <DependentUpon>DefineAbsence.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DefineLeave.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DefineLeave.Designer.cs">
+      <DependentUpon>DefineLeave.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MonthMeal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MonthMeal.Designer.cs">
+      <DependentUpon>MonthMeal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MonthOvertime.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MonthOvertime.Designer.cs">
+      <DependentUpon>MonthOvertime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TimeInTimeOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TimeInTimeOut.designer.cs">
+      <DependentUpon>TimeInTimeOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TimeSheet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TimeSheet.Designer.cs">
+      <DependentUpon>TimeSheet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ViolationHandling.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ViolationHandling.Designer.cs">
+      <DependentUpon>ViolationHandling.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\LateComingEarlyReturning.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LateComingEarlyReturning.Designer.cs">
+      <DependentUpon>LateComingEarlyReturning.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DailyManpower.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DailyManpower.Designer.cs">
+      <DependentUpon>DailyManpower.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RegisterLateEarly.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RegisterLateEarly.Designer.cs">
+      <DependentUpon>RegisterLateEarly.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RegisterNightWork.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RegisterNightWork.Designer.cs">
+      <DependentUpon>RegisterNightWork.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ScheduleForGetData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ScheduleForGetData.Designer.cs">
+      <DependentUpon>ScheduleForGetData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RawDataView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RawDataView.Designer.cs">
+      <DependentUpon>RawDataView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RegisterAttendanceItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RegisterAttendanceItem.Designer.cs">
+      <DependentUpon>RegisterAttendanceItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DefineAttendanceTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DefineAttendanceTable.Designer.cs">
+      <DependentUpon>DefineAttendanceTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DailyAttending.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DailyAttending.Designer.cs">
+      <DependentUpon>DailyAttending.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DefineAttendanceItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DefineAttendanceItem.Designer.cs">
+      <DependentUpon>DefineAttendanceItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DefineShift.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DefineShift.Designer.cs">
+      <DependentUpon>DefineShift.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DefineVacation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DefineVacation.Designer.cs">
+      <DependentUpon>DefineVacation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ImportFromExcel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ImportFromExcel.Designer.cs">
+      <DependentUpon>ImportFromExcel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\InputTimeInTimeOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\InputTimeInTimeOut.Designer.cs">
+      <DependentUpon>InputTimeInTimeOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MonthAttendance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MonthAttendance.Designer.cs">
+      <DependentUpon>MonthAttendance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RegisterAbsence.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RegisterAbsence.Designer.cs">
+      <DependentUpon>RegisterAbsence.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RegisterOvertime.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RegisterOvertime.Designer.cs">
+      <DependentUpon>RegisterOvertime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RegisterShift.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RegisterShift.Designer.cs">
+      <DependentUpon>RegisterShift.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\StatisticAbsence.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\StatisticAbsence.Designer.cs">
+      <DependentUpon>StatisticAbsence.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ViolationHandling.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\ViolationHandling.Designer.cs">
+      <DependentUpon>ViolationHandling.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\LateComingEarlyReturning.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\LateComingEarlyReturning.Designer.cs">
+      <DependentUpon>LateComingEarlyReturning.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\DailyManpower.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\DailyManpower.Designer.cs">
+      <DependentUpon>DailyManpower.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\MonthWorking.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\MonthWorking.Designer.cs">
+      <DependentUpon>MonthWorking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\MonthAttendance.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\MonthAttendance.Designer.cs">
+      <DependentUpon>MonthAttendance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ReportData.cs">
+      <DependentUpon>ReportData.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\ReportData.Designer.cs">
+      <DependentUpon>ReportData.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\DailyAttending.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\DailyAttending.Designer.cs">
+      <DependentUpon>DailyAttending.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\TimeInTimeOut.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\TimeInTimeOut.Designer.cs">
+      <DependentUpon>TimeInTimeOut.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\ChangeShift.resx">
+      <DependentUpon>ChangeShift.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MonthOT.resx">
+      <DependentUpon>MonthOT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RegisterDayOffGroup.resx">
+      <DependentUpon>RegisterDayOffGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TimeInTimeOutFix.resx">
+      <DependentUpon>TimeInTimeOutFix.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MonthWorking.resx">
+      <DependentUpon>MonthWorking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DayOff.resx">
+      <DependentUpon>DayOff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DefineAbsence.resx">
+      <DependentUpon>DefineAbsence.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DefineLeave.resx">
+      <DependentUpon>DefineLeave.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MonthMeal.resx">
+      <DependentUpon>MonthMeal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MonthOvertime.resx">
+      <DependentUpon>MonthOvertime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TimeInTimeOut.resx">
+      <DependentUpon>TimeInTimeOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TimeSheet.resx">
+      <DependentUpon>TimeSheet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ViolationHandling.resx">
+      <DependentUpon>ViolationHandling.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LateComingEarlyReturning.resx">
+      <DependentUpon>LateComingEarlyReturning.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DailyManpower.resx">
+      <DependentUpon>DailyManpower.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RegisterLateEarly.resx">
+      <DependentUpon>RegisterLateEarly.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RegisterNightWork.resx">
+      <DependentUpon>RegisterNightWork.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ScheduleForGetData.resx">
+      <DependentUpon>ScheduleForGetData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RawDataView.resx">
+      <DependentUpon>RawDataView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RegisterAttendanceItem.resx">
+      <DependentUpon>RegisterAttendanceItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DefineAttendanceTable.resx">
+      <DependentUpon>DefineAttendanceTable.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DailyAttending.resx">
+      <DependentUpon>DailyAttending.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DefineAttendanceItem.resx">
+      <DependentUpon>DefineAttendanceItem.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DefineShift.resx">
+      <DependentUpon>DefineShift.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DefineVacation.resx">
+      <DependentUpon>DefineVacation.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ImportFromExcel.resx">
+      <DependentUpon>ImportFromExcel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\InputTimeInTimeOut.resx">
+      <DependentUpon>InputTimeInTimeOut.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MonthAttendance.resx">
+      <DependentUpon>MonthAttendance.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RegisterAbsence.resx">
+      <DependentUpon>RegisterAbsence.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RegisterOvertime.resx">
+      <DependentUpon>RegisterOvertime.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RegisterShift.resx">
+      <DependentUpon>RegisterShift.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\StatisticAbsence.resx">
+      <DependentUpon>StatisticAbsence.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ViolationHandling.resx">
+      <DependentUpon>ViolationHandling.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\LateComingEarlyReturning.resx">
+      <DependentUpon>LateComingEarlyReturning.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\DailyManpower.resx">
+      <DependentUpon>DailyManpower.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\MonthWorking.resx">
+      <DependentUpon>MonthWorking.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\MonthAttendance.resx">
+      <DependentUpon>MonthAttendance.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\DailyAttending.resx">
+      <DependentUpon>DailyAttending.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\TimeInTimeOut.resx">
+      <DependentUpon>TimeInTimeOut.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Reports\ReportData.xsc">
+      <DependentUpon>ReportData.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\ReportData.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ReportData.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Reports\ReportData.xss">
+      <DependentUpon>ReportData.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\run-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{13e7d25b-e865-44c9-bafb-ee66c45f75a5}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FrameWork\Database\Database.csproj">
+      <Project>{0168274b-58ef-4295-aab0-9ccd3b80a6b2}</Project>
+      <Name>Database</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

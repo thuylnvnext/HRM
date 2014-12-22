@@ -1,0 +1,325 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0168274B-58EF-4295-AAB0-9CCD3B80A6B2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Database</RootNamespace>
+    <AssemblyName>Database</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\Connection.cs" />
+    <Compile Include="Common\Security.cs" />
+    <Compile Include="Common\User.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Personnel\Address.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Personnel\AddressType.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Personnel\EthnicGroup.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Personnel\MarriageStatus.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Personnel\Nationality.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Personnel\Phone.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Personnel\PhoneType.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Personnel\Religion.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Attendance\Absence.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Attendance\AttendanceItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Attendance\AttendanceItemGroup.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Attendance\AttendanceTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Attendance\AttendanceTableGroup.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Attendance\BreakOutBreakIn.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Attendance\ChangeShift.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Attendance\DailyManpower.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Attendance\DayOff.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Attendance\DayOffGroup.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Attendance\ModifiedData.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Attendance\MonthWorking.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Attendance\RegisterAttendanceItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Attendance\RegisterDayOffGroup.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Attendance\RegisterLateEarly.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Attendance\RegisterNightWork.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Attendance\RegisterOvertime.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Attendance\Leave.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Attendance\MonthAttendance.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Attendance\RawData.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Attendance\Reader.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Attendance\RegisterAbsence.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Attendance\RegisterShift.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Attendance\ScheduleForGetData.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Attendance\ShiftDetail.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Attendance\ShiftGroup.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Attendance\TimeInTimeOut.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Attendance\StatisticAbsenceItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Attendance\Vacation.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Attendance\WrokingCycle.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common\Abstract.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common\AutoUpdate.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common\Form.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common\Interface.cs">
+    </Compile>
+    <Compile Include="Common\Layout.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common\Option.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common\OptionGroup.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Attendance\Shift.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Personnel\AnnualLeave.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Attendance\Card.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common\CommandButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Personnel\Bank.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Personnel\BankAccount.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Personnel\Company.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common\Constant.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Personnel\Department.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Personnel\Employee.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Personnel\EmployeeDepartment.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Personnel\EmployeeInfoList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Personnel\EmployeePosition.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Personnel\HealthStatus.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Personnel\Identification.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Personnel\Job.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common\Menu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Personnel\Passport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Personnel\Position.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Personnel\Resignation.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Personnel\ResignationReason.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common\RightOfGroup.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common\Title.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common\UserGroup.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Personnel\WorkingInitialization.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
