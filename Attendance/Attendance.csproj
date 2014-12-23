@@ -160,6 +160,18 @@
     <Compile Include="Forms\ChangeShift.Designer.cs">
       <DependentUpon>ChangeShift.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\TimeInVS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TimeInVS.designer.cs">
+      <DependentUpon>TimeInVS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TimeInDM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TimeInDM.designer.cs">
+      <DependentUpon>TimeInDM.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\MonthOT.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -407,6 +419,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Forms\ChangeShift.resx">
       <DependentUpon>ChangeShift.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TimeInVS.resx">
+      <DependentUpon>TimeInVS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TimeInDM.resx">
+      <DependentUpon>TimeInDM.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MonthOT.resx">
       <DependentUpon>MonthOT.cs</DependentUpon>
