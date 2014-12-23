@@ -148,6 +148,8 @@
             this.sfdBackUpDatabase = new System.Windows.Forms.SaveFileDialog();
             this.pnlUpdate = new System.Windows.Forms.Panel();
             this.automaticUpdater = new wyDay.Controls.AutomaticUpdater();
+            this.bbiTimeInVS = new DevExpress.XtraBars.BarButtonItem();
+            this.bbiTimeInDM = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.rbcMain)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.apmMain)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pccOption)).BeginInit();
@@ -249,10 +251,12 @@
             this.bbiDefineShiftGroup,
             this.bbiMonthOvertime,
             this.bbiUpdate,
-            this.bbiCheckUpdate});
+            this.bbiCheckUpdate,
+            this.bbiTimeInVS,
+            this.bbiTimeInDM});
             this.rbcMain.LargeImages = this.imlLargeMenu;
             this.rbcMain.Location = new System.Drawing.Point(0, 0);
-            this.rbcMain.MaxItemId = 173;
+            this.rbcMain.MaxItemId = 175;
             this.rbcMain.Name = "rbcMain";
             this.rbcMain.PageHeaderItemLinks.Add(this.bbiUpdate);
             this.rbcMain.PageHeaderItemLinks.Add(this.bbiHelp);
@@ -263,8 +267,8 @@
             this.rbcMain.SelectedPage = this.rbpAttendance;
             this.rbcMain.Size = new System.Drawing.Size(1246, 143);
             this.rbcMain.StatusBar = this.rsbMain;
-            this.rbcMain.MouseClick += new System.Windows.Forms.MouseEventHandler(this.control_MouseClick);
             this.rbcMain.ShowCustomizationMenu += new DevExpress.XtraBars.Ribbon.RibbonCustomizationMenuEventHandler(this.rbcMain_ShowCustomizationMenu);
+            this.rbcMain.MouseClick += new System.Windows.Forms.MouseEventHandler(this.control_MouseClick);
             // 
             // apmMain
             // 
@@ -1056,6 +1060,8 @@
             // 
             this.rpgData.ItemLinks.Add(this.bbiGetRawData);
             this.rpgData.ItemLinks.Add(this.bbiDailyAttending, true);
+            this.rpgData.ItemLinks.Add(this.bbiTimeInDM, true);
+            this.rpgData.ItemLinks.Add(this.bbiTimeInVS);
             this.rpgData.ItemLinks.Add(this.bbiTimeInTimeOut, true);
             this.rpgData.ItemLinks.Add(this.bbiMonthAttendance);
             this.rpgData.ItemLinks.Add(this.bbiMonthOvertime, true);
@@ -1173,8 +1179,8 @@
             // 
             // automaticUpdater
             // 
-            this.automaticUpdater.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.automaticUpdater.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.automaticUpdater.ContainerForm = this;
             this.automaticUpdater.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.automaticUpdater.GUID = "e45c6188-5533-4adb-b0b0-c143b5a2f519";
@@ -1185,6 +1191,22 @@
             this.automaticUpdater.UpdateType = wyDay.Controls.UpdateType.DoNothing;
             this.automaticUpdater.wyUpdateCommandline = null;
             this.automaticUpdater.ReadyToBeInstalled += new System.EventHandler(this.automaticUpdater_ReadyToBeInstalled);
+            // 
+            // bbiTimeInVS
+            // 
+            this.bbiTimeInVS.Caption = "Về sớm";
+            this.bbiTimeInVS.Id = 173;
+            this.bbiTimeInVS.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("bbiTimeInVS.LargeGlyph")));
+            this.bbiTimeInVS.Name = "bbiTimeInVS";
+            this.bbiTimeInVS.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbiTimeInVS_ItemClick);
+            // 
+            // bbiTimeInDM
+            // 
+            this.bbiTimeInDM.Caption = "Đi muộn";
+            this.bbiTimeInDM.Id = 174;
+            this.bbiTimeInDM.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("bbiTimeInDM.LargeGlyph")));
+            this.bbiTimeInDM.Name = "bbiTimeInDM";
+            this.bbiTimeInDM.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbiTimeInDM_ItemClick);
             // 
             // Main
             // 
@@ -1333,5 +1355,7 @@
         private DevExpress.XtraBars.Ribbon.RibbonPage rbpSupport;
         private DevExpress.XtraBars.BarButtonItem bbiCheckUpdate;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup rpgUpate;
+        private DevExpress.XtraBars.BarButtonItem bbiTimeInVS;
+        private DevExpress.XtraBars.BarButtonItem bbiTimeInDM;
     }
 }

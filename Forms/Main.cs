@@ -847,5 +847,31 @@ namespace HRMplus.Forms
             
             }
         }
+
+        private void bbiTimeInDM_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            childForm = GetChildForm("TimeInDM");
+            if (childForm == null)
+            {
+                Attendance.Forms.TimeInDM timeInDM = new Attendance.Forms.TimeInDM();
+                timeInDM.MdiParent = this;
+                timeInDM.Show();
+            }
+            else
+                childForm.Activate();
+        }
+
+        private void bbiTimeInVS_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            childForm = GetChildForm("TimeInVS");
+            if (childForm == null)
+            {
+                Attendance.Forms.TimeInVS timeInVS = new Attendance.Forms.TimeInVS();
+                timeInVS.MdiParent = this;
+                timeInVS.Show();
+            }
+            else
+                childForm.Activate();
+        }
     }
 }
